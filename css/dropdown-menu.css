@@ -1,0 +1,233 @@
+/* screen - dropdown-menu */
+
+.dropdown-menu {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  height: 1080px;
+  justify-content: flex-start;
+  min-width: 1920px;
+  position: relative;
+  width: auto;
+}
+.dropdown-menu .about-us-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.52;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 34.07%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 7.81%;
+}
+.dropdown-menu .about-us-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .architecture-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.48;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 39.91%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 10.52%;
+}
+.dropdown-menu .architecture-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .contact-us-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.51;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 68.98%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 9.69%;
+}
+.dropdown-menu .contact-us-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .exit-SQ9Gz0 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: calc(27.52% - 4px);
+  top: 100px;
+  width: 16px;
+}
+.dropdown-menu .home-SQ9Gz0 {
+  background-color: transparent;
+  height: 36px;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.51;
+  pointer-events: auto;
+  position: absolute;
+  right: calc(23.99% - 23px);
+  text-align: center;
+  top: calc(29.21% - 11px);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 94px;
+}
+.dropdown-menu .home-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .interior-design-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.48;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 45.74%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 12.50%;
+}
+.dropdown-menu .interior-design-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .line-x-iQKj7u {
+  background-color: transparent;
+  height: calc(100.00% + 1px);
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: calc(100.00% + 1px);
+}
+.dropdown-menu .menu-C61RwL {
+  background-color: transparent;
+  flex-shrink: 0;
+  height: 1080px;
+  position: relative;
+  width: 1920px;
+}
+.dropdown-menu .news-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.49;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 63.15%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 4.37%;
+}
+.dropdown-menu .news-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .path-x-iQKj7u {
+  background-color: transparent;
+  height: calc(100.00% + 1px);
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: calc(100.00% + 1px);
+}
+.dropdown-menu .product-design-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.48;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 51.48%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 13.12%;
+}
+.dropdown-menu .product-design-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.dropdown-menu .rectangle-full-menu-SQ9Gz0 {
+  background-color: var(--black);
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 640px;
+}
+.dropdown-menu .the-team-SQ9Gz0 {
+  background-color: transparent;
+  height: 3.33%;
+  left: 72.29%;
+  letter-spacing: 3.00px;
+  line-height: 30px;
+  opacity: 0.51;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 57.31%;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: 8.23%;
+}
+.dropdown-menu .the-team-SQ9Gz0:hover {
+
+opacity: 1;
+}
+.gilroy-light-concord-13px {
+  color: var(--concord);
+  font-family: 'Gilroy-Light', Helvetica, Arial, serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+}
+.gilroy-light-white-18px {
+  color: var(--white);
+  font-family: 'Gilroy-Light', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+.gilroy-light-white-30px {
+  color: var(--white);
+  font-family: 'Gilroy-Light', Helvetica, Arial, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+}
+:root {
+  --black: rgba(0,0,0,1.0);
+  --black-2: rgba(0,0,0,0.812);
+  --concord: rgba(125,125,125,1.0);
+  --licorice: rgba(17,17,16,1.0);
+  --white: rgba(255,255,255,1.0);
+}

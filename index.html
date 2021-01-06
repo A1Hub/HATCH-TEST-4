@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/dropdown-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/launchpad-static/launchpad.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600,500");
+
+      @font-face {
+        font-family: "Gilroy-Light";
+        font-style: normal;
+        font-weight: 300;
+        src: url("https://anima-uploads.s3.amazonaws.com/595ad6e9500609000b928e06/gilroy-light.otf") format("opentype");
+      }
+
+      @font-face {
+        font-family: "Gilroy-ExtraBold";
+        font-style: normal;
+        font-weight: 700;
+        src: url("https://anima-uploads.s3.amazonaws.com/59dfb1260b1fed000d431d8f/Radomir Tinkov - Gilroy-ExtraBold.otf")
+          format("opentype");
+      }
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: rgba(0, 0, 0, 1)">
+    <input type="hidden" id="anPageName" name="page" value="index" />
+    <div class="container-center-horizontal">
+      <div class="index screen">
+        <div class="auto-flex10-C61RwL">
+          <div class="auto-flex-aKp6Uw">
+            <div class="overlap-group-JZ3s9D">
+              <img class="bg-02x27c" src="img/bg@1x.png" />
+              <div class="slides-buttons-02x27c"><img class="mid-cuW4sl" src="img/mid@1x.png" /></div>
+              <a href="news.html#home-2"><img class="right-02x27c" src="img/path-7@1x.png" /></a>
+              <div class="social-media-icons-02x27c">
+                <img class="twitter-YTKNq9 bp1-animate-enter" src="img/twitter@1x.png" />
+                <img class="youtube-YTKNq9 bp1-animate-enter1" src="img/youtube@1x.png" />
+                <img class="insta-YTKNq9 bp1-animate-enter2" src="img/insta@1x.png" />
+                <div class="linkedin-YTKNq9 bp1-animate-enter3">
+                  <img class="linkedin-n-0a3eTm" src="img/linkedin-n@1x.png" />
+                  <img class="linkedin-line-0a3eTm" src="img/linkedin-line@1x.png" />
+                  <img class="linkedin-circle-0a3eTm" src="img/linkedin-circle@1x.png" />
+                </div>
+                <img class="facebook-YTKNq9 bp1-animate-enter4" src="img/facebook-@1x.png" />
+              </div>
+              <div class="slide-tittle-02x27c bp1-animate-enter5">
+                <div class="hatch-it-sYZjzx">
+                  <span class="span0-YClxxJ"></span><span class="span1-YClxxJ">Hatch </span
+                  ><span class="span2-YClxxJ">It</span><span class="span3-YClxxJ">&nbsp;</span
+                  ><span class="span4-YClxxJ">&nbsp;&nbsp;</span>
+                </div>
+              </div>
+              <img class="logo-02x27c" src="img/hatch@1x.png" />
+              <a href="javascript:ShowOverlay('dropdown-menu', 'animate-appear');">
+                <div class="drop-menu-02x27c">
+                  <img class="line-1-DPmv8x" src="img/line-1@1x.png" />
+                  <img class="line-2-DPmv8x" src="img/line-2@1x.png" />
+                  <img class="line-3-DPmv8x" src="img/line-3@1x.png" /></div
+              ></a>
+              <div class="search-icon-02x27c">
+                <img class="line-Ydv9o5" src="img/line@1x.png" />
+                <img class="circle-Ydv9o5" src="img/circle@1x.png" />
+              </div>
+              <div class="search-hover-02x27c smart-layers-pointers">
+                <input class="search-M8dEbf" name="search0" placeholder="SEARCH" />
+                <img class="underline-M8dEbf" src="img/underline@1x.png" />
+                <img class="x2-M8dEbf" src="img/x1@1x.png" />
+                <img class="x1-M8dEbf" src="img/x1@1x.png" />
+              </div>
+              <img class="dot3-02x27c" src="img/dot1-2@1x.png" />
+              <a href="news.html#home-2"><img class="dot2-light-02x27c" src="img/dot2-light@1x.png" /></a>
+              <a href="news.html#home-3"><img class="dot1-02x27c" src="img/dot1@1x.png" /></a>
+            </div>
+            <div class="overlap-group1-JZ3s9D">
+              <a href="news.html#architecture-page">
+                <div class="arc-component-2Ngjxf bp1-animate-enter6" show-on-scroll>
+                  <div class="arc-hover-wosV5O hidden smart-layers-pointers">
+                    <img class="fade-dFOxDN smart-layers-pointers" src="img/fade@1x.png" />
+                    <div class="architecture-dFOxDN smart-layers-pointers">ARCHITECTURE</div>
+                  </div>
+                </div></a
+              >
+              <a href="news.html#interior-page">
+                <div class="interior-component-2Ngjxf bp1-animate-enter7" show-on-scroll>
+                  <img class="img-82LcSr" src="img/img@1x.png" />
+                  <div class="int-hover-82LcSr hidden smart-layers-pointers">
+                    <div class="interior-design-Jbsf02">INTERIOR DESIGN</div>
+                  </div>
+                </div></a
+              >
+              <a href="news.html#products-page">
+                <div class="products-component-2Ngjxf bp1-animate-enter8" show-on-scroll>
+                  <img class="img-7jFEVn" src="img/img-1@1x.png" />
+                  <div class="pro-hover-7jFEVn hidden smart-layers-pointers">
+                    <div class="products-DiEA7f">PRODUCTS</div>
+                  </div>
+                </div></a
+              >
+              <img class="slogan-bg-2Ngjxf bp1-animate-enter9" show-on-scroll src="img/-slogan-bg@1x.png" />
+              <div class="article-slogan-2Ngjxf hidden smart-layers-pointers">
+                <div class="hatch-nIIlRn">HATCH !</div>
+                <div class="tell-me-mo-bout-hatch-nIIlRn">Tell Me More About HATCH</div>
+                <img class="line-arrow-nIIlRn" src="img/line-arrow@1x.png" />
+                <a href="news.html#about">
+                  <div class="arrow-group-nIIlRn bp1-animate-enter10 smart-layers-pointers" show-on-scroll>
+                    <img class="right-arrow-xdH9Kq" src="img/right-arrow@1x.png" /></div
+                ></a>
+                <div class="lorem-ipsu--diam-volu-nIIlRn">
+                  Lorem&nbsp;&nbsp;ipsum&nbsp;&nbsp;dolor&nbsp;&nbsp;sit&nbsp;&nbsp;amet,&nbsp;&nbsp;consetetur&nbsp;&nbsp;sadipscing&nbsp;&nbsp;elitr,&nbsp;&nbsp;sed&nbsp;&nbsp;diam&nbsp;&nbsp;nonumy
+                  eirmod <br />tempor&nbsp;&nbsp;invidunt&nbsp;&nbsp;ut labore et dolore magna aliquyam erat, sed diam
+                  voluptua. At vero
+                  <br />eos&nbsp;&nbsp;et&nbsp;&nbsp;accusam&nbsp;&nbsp;et&nbsp;&nbsp;justo&nbsp;&nbsp;duo&nbsp;&nbsp;dolores
+                  et ea rebum. Stet clita kasd gubergren, no sea <br />takimata&nbsp;&nbsp; sanctus&nbsp;&nbsp;
+                  est&nbsp;&nbsp; Lorem&nbsp;&nbsp;
+                  ipsum&nbsp;&nbsp;dolor&nbsp;&nbsp;sit&nbsp;&nbsp;amet.&nbsp;&nbsp;Lorem&nbsp;&nbsp;ipsum&nbsp;&nbsp;dolor&nbsp;&nbsp;sit&nbsp;&nbsp;amet,&nbsp;&nbsp;<br />consetetur&nbsp;&nbsp;sadipscing&nbsp;&nbsp;elitr,&nbsp;&nbsp;sed&nbsp;&nbsp;diam&nbsp;&nbsp;nonumy&nbsp;&nbsp;eirmod&nbsp;&nbsp;tempor&nbsp;&nbsp;invidunt
+                  ut labore et <br />dolore&nbsp;&nbsp;&nbsp;&nbsp; magna&nbsp;&nbsp;&nbsp;&nbsp; aliquyam.
+                </div>
+              </div>
+              <img class="slogan-ft-bg-2Ngjxf bp1-animate-enter11" show-on-scroll src="img/slogan-ft-bg@1x.png" />
+              <div class="artical-slogan-2-2Ngjxf hidden smart-layers-pointers">
+                <div class="contact-us-zUpUg6">Contact Us</div>
+                <img class="line-arrow-zUpUg6" src="img/line-arrow-1@1x.png" />
+                <div class="in-a-city--sing-hatch-zUpUg6">
+                  IN A CITY FILLED WITH SO MANY
+                  CHOICESWE&nbsp;&nbsp;THANK&nbsp;&nbsp;YOU&nbsp;&nbsp;FOR&nbsp;&nbsp;CHOOSING&nbsp;&nbsp;HATCH
+                </div>
+                <a href="news.html#contact">
+                  <div class="arrow-group-zUpUg6 smart-layers-pointers">
+                    <img class="right-arrow-UZ6O8H" src="img/right-arrow-1@1x.png" /></div
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="auto-flex9-aKp6Uw">
+            <a href="news.html#home-2" class="align-self-flex-start"
+              ><img class="hatch-fgaXRX bp1-animate-enter29" show-on-scroll src="img/hatch-1@1x.png"
+            /></a>
+            <div class="auto-flex8-fgaXRX">
+              <div class="contact-a0CUoc gilroy-light-white-18px bp1-animate-enter28" show-on-scroll>CONTACT</div>
+              <div class="auto-flex7-a0CUoc">
+                <div class="auto-flex6-uhN4Fu">
+                  <img class="send-icon-fbTfiQ bp1-animate-enter27" show-on-scroll src="img/send-icon@1x.png" />
+                  <img class="telephone-fbTfiQ bp1-animate-enter26" show-on-scroll src="img/telephone@1x.png" />
+                </div>
+                <div class="auto-flex4-uhN4Fu">
+                  <a href="news.html#contact"
+                    ><div class="infohatchcomsa-NM9kIr gilroy-light-concord-13px bp1-animate-enter24" show-on-scroll>
+                      info@hatch.com.sa
+                    </div></a
+                  >
+                  <a href="news.html#contact"
+                    ><div class="x966-556096364-NM9kIr gilroy-light-concord-13px bp1-animate-enter25" show-on-scroll>
+                      +966-556096364
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="auto-flex5-fgaXRX">
+              <div class="auto-flex3-zpoKmp">
+                <div class="popular-searches-xQfgfP gilroy-light-white-18px bp1-animate-enter23" show-on-scroll>
+                  POPULAR SEARCHES
+                </div>
+                <a href="news.html#contact"
+                  ><div
+                    class="how-would---arcitects-xQfgfP gilroy-light-concord-13px bp1-animate-enter20"
+                    show-on-scroll
+                  >
+                    How Would You Describe Hatch Arcitects?
+                  </div></a
+                >
+                <a href="news.html#contact"
+                  ><div
+                    class="w-hat-are--rchitectst-xQfgfP gilroy-light-concord-13px bp1-animate-enter21"
+                    id="w-hat-are--rchitectst"
+                    show-on-scroll
+                  >
+                    What Are The Characters Of Hatch Architectst?
+                  </div></a
+                >
+                <a href="news.html#contact"
+                  ><div
+                    class="whats-dose-stands-for-xQfgfP gilroy-light-concord-13px bp1-animate-enter22"
+                    show-on-scroll
+                  >
+                    Whats Dose Hatch Architects Stands For?
+                  </div></a
+                >
+              </div>
+              <div class="auto-flex2-zpoKmp">
+                <div class="latest-posts-0OkHNl gilroy-light-white-18px bp1-animate-enter19" show-on-scroll>
+                  LATEST POSTS
+                </div>
+                <a href="news.html#contact"
+                  ><div
+                    class="exceptional-projetcs-0OkHNl gilroy-light-concord-13px bp1-animate-enter16"
+                    id="exceptional-projetcs"
+                    show-on-scroll
+                  >
+                    Exceptional Projetcs
+                  </div></a
+                >
+                <a href="news.html#contact"
+                  ><div
+                    class="featured-projects-0OkHNl gilroy-light-concord-13px bp1-animate-enter17"
+                    id="featured-projects"
+                    show-on-scroll
+                  >
+                    Featured Projects
+                  </div></a
+                >
+                <a href="news.html#contact"
+                  ><div
+                    class="recen-tly--d-projects-0OkHNl gilroy-light-concord-13px bp1-animate-enter18"
+                    show-on-scroll
+                  >
+                    Recently Added Projects
+                  </div></a
+                >
+              </div>
+              <div class="auto-flex1-zpoKmp">
+                <div class="about-hatch-lDvTxx gilroy-light-white-18px bp1-animate-enter15" show-on-scroll>
+                  ABOUT HATCH
+                </div>
+                <a href="news.html#contact"
+                  ><div class="about-us-lDvTxx gilroy-light-concord-13px bp1-animate-enter12" show-on-scroll>
+                    About Us
+                  </div></a
+                >
+                <a href="news.html#contact"
+                  ><div class="lorem-ipsum-lDvTxx gilroy-light-concord-13px bp1-animate-enter13" show-on-scroll>
+                    Lorem Ipsum
+                  </div></a
+                >
+                <a href="news.html#contact"
+                  ><div class="loreim-ipsiom-lDvTxx gilroy-light-concord-13px bp1-animate-enter14" show-on-scroll>
+                    Loreim Ipsiom
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auto-flex11-C61RwL">
+          <img class="insta-0KEKHQ" id="insta" src="img/insta-1@1x.png" />
+          <a href="#insta" class="align-self-flex-end"><img class="facebook-0KEKHQ" src="img/facebook--1@1x.png" /></a>
+          <img class="twitter-0KEKHQ" src="img/twitter-1@1x.png" />
+          <div class="linkedin-0KEKHQ">
+            <img class="linkedin-n-ipm7YL" src="img/linkedin-n-1@1x.png" />
+            <img class="linkedin-line-ipm7YL" src="img/linkedin-line-1@1x.png" />
+            <img class="linkedin-circle-ipm7YL" src="img/linkedin-circle-1@1x.png" />
+          </div>
+          <img class="youtube-0KEKHQ" src="img/youtube-1@1x.png" />
+        </div>
+      </div>
+    </div>
+    <div id="overlay-dropdown-menu" class="overlay" style="min-height: 3931px">
+      <div class="container-center-horizontal">
+        <div class="dropdown-menu screen">
+          <div class="menu-C61RwL">
+            <div class="rectangle-full-menu-SQ9Gz0"></div>
+            <a href="javascript:history.back()">
+              <div class="exit-SQ9Gz0">
+                <img class="path-x-iQKj7u" src="img/path-x@1x.png" />
+                <img class="line-x-iQKj7u" src="img/line-x@1x.png" /></div
+            ></a>
+            <a href="index.html"><div class="home-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">Home</div></a>
+            <a href="news.html#architecture-page"
+              ><div class="architecture-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">Architecture</div></a
+            >
+            <a href="news.html#interior-page"
+              ><div class="interior-design-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">
+                Interior design
+              </div></a
+            >
+            <a href="news.html#products-page"
+              ><div class="product-design-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">product design</div></a
+            >
+            <a href="news.html#news"
+              ><div class="news-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">News</div></a
+            >
+            <a href="news.html#about"
+              ><div class="about-us-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">About Us</div></a
+            >
+            <a href="news.html#contact"
+              ><div class="contact-us-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">Contact Us</div></a
+            >
+            <a href="news.html#team"
+              ><div class="the-team-SQ9Gz0 gilroy-light-white-30px smart-layers-pointers">The Team</div></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var overlay_id = "overlay-dropdown-menu";
+      document.getElementById(overlay_id).addEventListener(
+        "click",
+        function (event) {
+          var e = event || window.event;
+          var clickedDiv = e.toElement || e.target;
+          if (clickedDiv.parentElement.id == overlay_id) {
+            HideOverlay("dropdown-menu", "animate-disappear");
+          }
+        },
+        false
+      );
+    </script>
+    <div class="container-center-horizontal">
+      <div class="home-page-mobile screen">
+        <div class="overlap-group-C61RwL">
+          <div class="hero-4eduM0"></div>
+          <div class="brand-4eduM0"></div>
+          <div class="slides-buttons-4eduM0"><img class="right-FuqvMV" src="img/right-1@1x.png" /></div>
+          <div class="slides-buttons-BJQsbv"><img class="right-FZxxG5" src="img/right-2@1x.png" /></div>
+          <div class="drop-menu-4eduM0 smart-layers-pointers">
+            <img class="line-1-InBxPU" src="img/line-1@1x.png" />
+            <img class="line-2-InBxPU" src="img/line-2@1x.png" />
+            <img class="line-3-InBxPU" src="img/line-3@1x.png" />
+          </div>
+        </div>
+        <div class="overlap-group1-C61RwL">
+          <img class="slogan-bg-RH0WJ5" src="img/-slogan-bg-1@1x.png" />
+          <div class="article-slogan-RH0WJ5 bp2-animate-enter5 smart-layers-pointers" show-on-scroll>
+            <div class="hatch-6s8Hod bp2-animate-enter" show-on-scroll>HATCH !</div>
+            <div class="tell-me-mo-bout-hatch-6s8Hod bp2-animate-enter1" show-on-scroll>Tell Me More About HATCH</div>
+            <img class="line-arrow-6s8Hod bp2-animate-enter2" show-on-scroll src="img/line-arrow-2@1x.png" />
+            <div class="arrow-group-6s8Hod bp2-animate-enter3 smart-layers-pointers" show-on-scroll>
+              <img class="right-arrow-ORx8Yw" src="img/right-arrow-2@1x.png" />
+            </div>
+            <div class="lorem-ipsu--diam-volu-6s8Hod bp2-animate-enter4" show-on-scroll>
+              Lorem&nbsp;&nbsp;ipsum&nbsp;&nbsp;dolor&nbsp;&nbsp;sit&nbsp;&nbsp;amet,&nbsp;&nbsp;consetetur&nbsp;&nbsp;sadipscing&nbsp;&nbsp;elitr,&nbsp;&nbsp;sed&nbsp;&nbsp;diam&nbsp;&nbsp;nonumy
+              eirmod <br />tempor&nbsp;&nbsp;invidunt&nbsp;&nbsp;ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero
+              <br />eos&nbsp;&nbsp;et&nbsp;&nbsp;accusam&nbsp;&nbsp;et&nbsp;&nbsp;justo&nbsp;&nbsp;duo&nbsp;&nbsp;dolores
+              et ea rebum. Stet clita kasd gubergren, no sea <br />takimata&nbsp;&nbsp; sanctus&nbsp;&nbsp;
+              est&nbsp;&nbsp; Lorem&nbsp;&nbsp;
+              ipsum&nbsp;&nbsp;dolor&nbsp;&nbsp;sit&nbsp;&nbsp;amet.&nbsp;&nbsp;Lorem&nbsp;&nbsp;ipsum&nbsp;&nbsp;dolor&nbsp;&nbsp;sit&nbsp;&nbsp;amet,&nbsp;&nbsp;<br />consetetur&nbsp;&nbsp;sadipscing&nbsp;&nbsp;elitr,&nbsp;&nbsp;sed&nbsp;&nbsp;diam&nbsp;&nbsp;nonumy&nbsp;&nbsp;eirmod&nbsp;&nbsp;tempor&nbsp;&nbsp;invidunt
+              ut labore et <br />dolore&nbsp;&nbsp;&nbsp;&nbsp; magna&nbsp;&nbsp;&nbsp;&nbsp; aliquyam.
+            </div>
+          </div>
+        </div>
+        <div class="arc-component-C61RwL">
+          <div class="arc-hover-XWLzHF">
+            <img class="fade-8FeC7p smart-layers-pointers" src="img/fade-1@1x.png" />
+            <div class="architecture-8FeC7p smart-layers-pointers">ARCHITECTURE</div>
+          </div>
+        </div>
+        <div class="overlap-group2-C61RwL">
+          <div class="products-component-4a9k2Y">
+            <img class="img-2xlxvA" src="img/img-2@1x.png" />
+            <div class="pro-hover-2xlxvA"><div class="products-RHJZfp">PRODUCTS</div></div>
+          </div>
+          <div class="interior-component-4a9k2Y">
+            <img class="img-Rtc7Bo" src="img/img-3@1x.png" />
+            <div class="int-hover-Rtc7Bo"><div class="interior-design-Rh7eHE">INTERIOR DESIGN</div></div>
+          </div>
+          <img class="slogan-ft-bg-4a9k2Y" src="img/slogan-ft-bg-1@1x.png" />
+          <div class="artical-slogan-2-4a9k2Y">
+            <div class="contact-us-o4aLrA">Contact Us</div>
+            <img class="line-arrow-o4aLrA" src="img/line-arrow-3@1x.png" />
+            <div class="in-a-city--sing-hatch-o4aLrA">
+              IN A CITY FILLED WITH SO MANY
+              CHOICESWE&nbsp;&nbsp;THANK&nbsp;&nbsp;YOU&nbsp;&nbsp;FOR&nbsp;&nbsp;CHOOSING&nbsp;&nbsp;HATCH
+            </div>
+            <div class="arrow-group-o4aLrA bp2-animate-enter6 smart-layers-pointers" show-on-scroll>
+              <img class="right-arrow-4WpNwS" src="img/right-arrow-3@1x.png" />
+            </div>
+          </div>
+          <div class="logo-4a9k2Y"></div>
+          <div class="about-hatch-4a9k2Y">
+            <div class="about-us-xzxIVN gilroy-light-concord-13px">About Us</div>
+            <div class="lorem-ipsum-xzxIVN gilroy-light-concord-13px">Lorem Ipsum</div>
+            <div class="loreim-ipsiom-xzxIVN gilroy-light-concord-13px">Loreim Ipsiom</div>
+            <div class="about-hatch-xzxIVN gilroy-light-white-18px">ABOUT HATCH</div>
+          </div>
+        </div>
+        <img class="s-m-icons-C61RwL" src="img/s-m-icons-1@1x.png" />
+        <div class="auto-flex-C61RwL">
+          <div class="contact-destils-fhuxN3">
+            <div class="infohatchcomsa-0xyG2D gilroy-light-concord-13px">Info@hatch.com.sa</div>
+            <div class="x966-556096364-0xyG2D gilroy-light-concord-13px">+966-556096364</div>
+            <img class="telephone-0xyG2D" src="img/telephone@1x.png" />
+            <img class="send-icon-0xyG2D" src="img/send-icon@1x.png" />
+            <div class="contact-0xyG2D gilroy-light-white-18px">CONTACT</div>
+          </div>
+          <div class="latest-fhuxN3">
+            <div class="exceptional-projetcs-ekS28e gilroy-light-concord-13px">Exceptional Projetcs</div>
+            <div class="featured-projects-ekS28e gilroy-light-concord-13px">Featured Projects</div>
+            <div class="recen-tly--d-projects-ekS28e gilroy-light-concord-13px">Recently Added Projects</div>
+            <div class="latest-posts-ekS28e gilroy-light-white-18px">LATEST POSTS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      ShowOverlay = function (overlayName, animationName) {
+        overlayName = "overlay-" + overlayName;
+        var cssClasses = document.getElementById(overlayName).className.split(" ");
+        var last = cssClasses.slice(-1)[0];
+        if (last.lastIndexOf("animate") == -1) {
+          document.getElementById(overlayName).className =
+            document.getElementById(overlayName).className + " " + animationName;
+        }
+        if (window.loadAsyncSrc != undefined) {
+          loadAsyncSrc();
+        }
+      };
+      HideOverlay = function (overlayName, animationName) {
+        overlayName = "overlay-" + overlayName;
+        var cssClasses = document.getElementById(overlayName).className.split(" ");
+        var last = cssClasses.slice(-1)[0];
+        if (last.lastIndexOf("animate") != -1) {
+          cssClasses.splice(-1);
+          cssClasses.push(animationName);
+          document.getElementById(overlayName).className = cssClasses.join(" ");
+
+          cssClasses.splice(-1);
+          setTimeout(function () {
+            document.getElementById(overlayName).className = cssClasses.join(" ");
+          }, 1100);
+        }
+        var vids = document.getElementsByTagName("video");
+        if (vids) {
+          for (var i = 0; i < vids.length; i++) {
+            var video = vids.item(i);
+            video.pause();
+          }
+        }
+      };
+    </script>
+    <script>
+      function ShowOnScroll() {
+        this.toShow = [];
+        this.nextEventY = undefined;
+      }
+
+      ShowOnScroll.prototype.show = function (e) {
+        e.style.display = "";
+      };
+
+      ShowOnScroll.prototype.hide = function (e) {
+        e.style.display = "none";
+      };
+
+      ShowOnScroll.prototype.getTop = function (e) {
+        if (e.Top != undefined && e.Top != 0) {
+          return e.Top;
+        }
+        var top = 0;
+        var iter = e;
+        do {
+          top += iter.offsetTop || 0;
+          iter = iter.offsetParent;
+        } while (iter);
+        e.Top = top;
+        return top;
+      };
+
+      ShowOnScroll.prototype.onScroll = function () {
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+          return;
+        }
+        this.nextEventY = undefined;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+          } else {
+            this.nextEventY = top;
+            break;
+          }
+        }
+      };
+
+      ShowOnScroll.prototype.resetScrolling = function () {
+        // Clear state
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          this.show(e);
+        }
+        this.toShow = [];
+        this.nextEventY == undefined;
+
+        // Collect items
+        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
+          return e.getAttribute("show-on-scroll") != undefined;
+        });
+        var getTop = this.getTop;
+        itemsToShowOnScroll.sort(function (a, b) {
+          return getTop(a) - getTop(b);
+        });
+        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+          var e = itemsToShowOnScroll[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            continue;
+          }
+          this.toShow.push(e);
+          this.hide(e);
+          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+        }
+      };
+
+      ShowOnScroll.prototype.handleEvent = function (e) {
+        switch (e.type) {
+          case "scroll":
+            this.onScroll();
+            break;
+          case "resize":
+            this.resetScrolling();
+            break;
+        }
+      };
+
+      ShowOnScroll.prototype.init = function () {
+        this.resetScrolling();
+        window.addEventListener("scroll", this);
+        window.addEventListener("resize", this);
+      };
+
+      // After anima-src
+      setTimeout(function () {
+        var instShowOnScroll = new ShowOnScroll();
+        instShowOnScroll.init();
+      }, 250);
+    </script>
+  </body>
+</html>
